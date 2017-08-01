@@ -67,6 +67,8 @@ timestamps {
  */
 @NonCPS
 void sendEmail(String subject, String body) {
+    echo "Figuring out mails"
+    echo "   Subject with ${subject}"
     def mailTo = emailextrecipients( recipientProviders: [
                         [$class: 'CulpritsRecipientProvider'],
                         [$class: 'RequesterRecipientProvider']] )
