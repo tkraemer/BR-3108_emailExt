@@ -1,9 +1,5 @@
 
 
-
-import groovy.util.AntBuilder
-
-
 timestamps {
     ansiColor('xterm') {
 
