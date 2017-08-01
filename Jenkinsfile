@@ -40,7 +40,7 @@ timestamps {
                 }
 
                 stage("Fail or not"){
-                    throw new Exception("Breaking")
+                    // throw new Exception("Breaking")
                 }
 
 
