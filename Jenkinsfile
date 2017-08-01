@@ -6,7 +6,7 @@ timestamps {
         /** keep builds/artifacts for 10 days */
         String keep10 = '10'
         /** keep up to 5 builds/artifacts */
-        String keep5 = '0'
+        String keep5 = '1'
 
         properties([ disableConcurrentBuilds(),
                      pipelineTriggers([[$class: 'GitHubPushTrigger']]),
