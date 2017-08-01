@@ -28,9 +28,9 @@ timestamps {
 
                 stage("PreBuild") {
                     //clean workspace
-                    listDir(workspace)
+                 
                     step([$class: 'WsCleanup'])
-                    listDir(workspace)
+               
 
                     //clone
                     timeout(time: 30, unit: 'MINUTES') {
