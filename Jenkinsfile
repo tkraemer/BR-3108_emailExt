@@ -34,7 +34,7 @@ timestamps {
 
                     //clone
                     timeout(time: 30, unit: 'MINUTES') {
-                        scm checkout
+                        checkout scm
                     }
 
                 }
