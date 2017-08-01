@@ -72,8 +72,10 @@ void sendEmail(String subject, String body) {
     def mailTo = emailextrecipients( recipientProviders: [
                         [$class: 'CulpritsRecipientProvider'],
                         [$class: 'RequesterRecipientProvider']] )
-    echo "Number of mails: ${mailTo.size()}"
+    
     echo "Mails go to: ${mailTo}"
+    echo "Number of mails: ${mailTo.size()}"
+
     
 /*        emailext subject: subject,
                 body: body,
