@@ -41,7 +41,8 @@ timestamps {
 
                 stage("Fail or not"){
                     // throw new Exception("Breaking")
-                    error("Build failed because of this and that..")
+                    // error("Build failed because of this and that..")
+                    currentBuild.result = 'FAILURE'
                 }
 
 
