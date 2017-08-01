@@ -6,7 +6,7 @@ timestamps {
         /** keep builds/artifacts for 10 days */
         String keep10 = '10'
         /** keep up to 5 builds/artifacts */
-        String keep5 = '1'
+        String keep5 = '10'
 
         properties([ disableConcurrentBuilds(),
                      pipelineTriggers([[$class: 'GitHubPushTrigger']]),
@@ -40,7 +40,7 @@ timestamps {
                 }
 
                 stage("Fail or not"){
-                    // throw new Exception("Breaking")
+                    throw new Exception("Breaking")
                 }
 
 
