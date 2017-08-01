@@ -67,11 +67,18 @@ timestamps {
  */
 @NonCPS
 void sendEmail(String subject, String body) {
-        emailext subject: subject,
+    def mailTo = emailextrecipients [
+                        [$class: 'CulpritsRecipientProvider'],
+                        [$class: 'RequesterRecipientProvider']]
+    echo "Number of mails: ${mailTo.size()}"
+    echo "Mails go to: ${mailTo}"
+    
+/*        emailext subject: subject,
                 body: body,
                 recipientProviders: [
                         [$class: 'CulpritsRecipientProvider'],
                         [$class: 'RequesterRecipientProvider']]
+*/ 
 }
 
 
