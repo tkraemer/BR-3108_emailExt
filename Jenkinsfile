@@ -24,7 +24,7 @@ timestamps {
 
                 String workspace = pwd()
 
-                // change 1 2
+                // change 1 2 3
 
                 stage("PreBuild") {
                     //clean workspace
@@ -41,7 +41,7 @@ timestamps {
 
                 stage("Fail or not"){
                     // throw new Exception("Breaking")
-                    fail
+                    error("Build failed because of this and that..")
                 }
 
 
