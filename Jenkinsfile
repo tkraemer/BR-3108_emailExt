@@ -24,7 +24,7 @@ timestamps {
 
                 String workspace = pwd()
 
-
+                // change 1 
 
                 stage("PreBuild") {
                     //clean workspace
